@@ -4,7 +4,7 @@ FROM registry.fedoraproject.org/fedora-minimal:${FEDORA_VERSION}
 ARG RUBY_VERSION
 ARG PACKAGE_VERSION
 RUN microdnf --nodocs upgrade -y && \
-    microdnf install -y fedora-repos-modular-${PACKAGE_VERSION}.noarch && \
+    microdnf install -y fedora-repos-modular.noarch && \
     microdnf module enable -y ruby:${RUBY_VERSION} && \
     microdnf module enable -y nodejs:14 && \
     microdnf --nodocs install -y \
