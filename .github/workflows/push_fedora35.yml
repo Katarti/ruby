@@ -31,7 +31,7 @@ jobs:
           config: hadolint-ci.yaml
 
       - name: render docker-compose.yml
-        run: RUBY_VERSION=${{ matrix.ruby }} IMAGE_OS=fedora35 envsubst <  docker-compose.yml.tmpl >  docker-compose.yml
+        run: RUBY_VERSION=${{ matrix.ruby }} FEDORA_VERSION=35 PACKAGE_VERSION=35-1 envsubst <  docker-compose.yml.tmpl >  docker-compose.yml
 
       - name: Build image
         run: docker-compose -f docker-compose.yml build ruby

@@ -3,7 +3,9 @@ services:
   ruby:
     build:
       context: .
-      dockerfile: Dockerfile.${IMAGE_OS}
+      dockerfile: Dockerfile
       args:
         - RUBY_VERSION=${RUBY_VERSION}
+        - FEDORA_VERSION=${FEDORA_VERSION}
+        - PACKAGE_VERSION=${PACKAGE_VERSION}
     image: ghcr.io/katarti/ruby:${RUBY_VERSION}
