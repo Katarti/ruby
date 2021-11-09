@@ -3,7 +3,7 @@ services:
   ruby:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.${IMAGE_OS}
       args:
         - RUBY_VERSION=${RUBY_VERSION}
     image: ghcr.io/katarti/ruby:${RUBY_VERSION}
