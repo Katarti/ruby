@@ -13,6 +13,7 @@ RUN microdnf --nodocs upgrade -y && \
     bison \
     bzip2 \
     curl-devel \
+    procps-ng \
     cronie \
     gcc-c++ \
     git-core \
