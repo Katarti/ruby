@@ -13,7 +13,6 @@ RUN microdnf --nodocs upgrade -y && \
     bison \
     bzip2 \
     curl-devel \
-    procps-ng \
     cronie \
     gcc-c++ \
     git-core \
@@ -28,6 +27,7 @@ RUN microdnf --nodocs upgrade -y && \
     openssl-devel \
     patch \
     postgresql \
+    procps-ng \
     redhat-rpm-config \
     ruby \
     ruby-devel \
